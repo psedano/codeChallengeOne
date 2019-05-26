@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   ResumeData.plist
-   CodeChallengeHSBC
-
-   Created by Pablo Irmin Rivera Sedano on 5/21/19.
-   Copyright (c) 2019 Globant. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>careerHistory</key>
+	<array>
+		<dict>
+			<key>jobDescription</key>
+			<string>Collaboration in a web app project for a client that allows registered users to upload files and folder creation
+Created in React, Redux, ESLint, ES6, JSX, Sass, Jest, Traverson, React Router, Redux Promise, Axios, Enzyme
+</string>
+			<key>dates</key>
+			<string>Jan. 2017 – Jul. 2017</string>
+			<key>position</key>
+			<string>FronEnd Developer</string>
+			<key>companyLogo</key>
+			<string>kunaiLogo</string>
+			<key>jobTitle</key>
+			<string>Kunai Consulting Inc. , CDMX/Oakland, Mexico, USA</string>
+		</dict>
+		<dict>
+			<key>jobDescription</key>
+			<string>App Link: https://itunes.apple.com/mx/app/citibanamex-m%C3%B3vil/id498483038?mt=8
+Technical leader for two development pods.
+Implemented all the functionality for Login to the Citibanamex App.
+Leadership for Scrum meetings for all the functionality for Move Money functionality (Transfers, payments, Investments) inside the app.
+People satisfaction and support developers in their day to day activities.
+Meetings with the client providing feedback, solutions and proposal of new functionality.</string>
+			<key>dates</key>
+			<string>Jul. 2017 - Jan. 2019</string>
+			<key>position</key>
+			<string>Technical Lead</string>
+			<key>companyLogo</key>
+			<string>citiLogo</string>
+			<key>jobTitle</key>
+			<string>Globant México, CDMX/ Citibanamex Mobile</string>
+		</dict>
+		<dict>
+			<key>jobDescription</key>
+			<string>Created the whole structure for the iOS App using MVP architecture. Work flow with Scrum methodology. Bug fixing, test and release builds with HockeyApp. Use of Cocoapods for third party libraries. Custom controls and store information in local device database using Realm.</string>
+			<key>dates</key>
+			<string>Jan. 2019 – Present
+Jan. 2019 – Present</string>
+			<key>position</key>
+			<string>iOS Developer / iOS Lead
+iOS Developer / iOS Lead
+</string>
+			<key>companyLogo</key>
+			<string>novartisLogo</string>
+			<key>jobTitle</key>
+			<string>Globant México, CDMX / SmartPASI App, Argentina</string>
+		</dict>
+	</array>
+	<key>informacionContenido</key>
+	<array>
+		<string></string>
+		<string>Spanish (Native Speaker), English (Advanced)</string>
+		<string>Swift, Redux, Objective-C, React, Sass, Less</string>
+		<string>Analytical and detail-oriented professional developer with experience in banking and consulting sectors, sustaining meetings with end-user operators, department Managers and directors to
+document and develop specific software requirements, algorithms, web (React/Redux) and mobile apps (iOS). </string>
+	</array>
+	<key>informationTitulos</key>
+	<array>
+		<string>Career History</string>
+		<string>Languages</string>
+		<string>Qualifications</string>
+		<string>Career Summary</string>
+	</array>
+	<key>edad</key>
+	<integer>35</integer>
+	<key>nombreCompleto</key>
+	<string>Pablo Irmin Rivera Sedano</string>
+</dict>
 </plist>

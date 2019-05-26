@@ -1,30 +1,26 @@
-//
-//  DetailViewController.swift
-//  CodeChallengeHSBC
-//
-//  Created by Pablo Irmin Rivera Sedano on 5/22/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import UIKit
 
 class DetailViewController: UIViewController {
+  @IBOutlet weak var pageTitle: UILabel!
+  @IBOutlet weak var pageContent: UITextView!
+  
+  var selectedInfo = [String]()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    pageTitle.text = selectedInfo.first
+    pageContent.text = selectedInfo[1]
+    pageTitle.backgroundColor = UIColor.CustomColors.color4
+    pageTitle.textColor = UIColor.white
+    pageTitle.layer.masksToBounds = true
+    pageTitle.layer.cornerRadius = 8
+    pageContent.layer.cornerRadius = 8
+    pageContent.backgroundColor = UIColor.CustomColors.color4
+    pageContent.textColor = UIColor.white
+  }
+  
+  @IBAction func closeButtonTapped(sender: UIButton) {
+    dismiss(animated: true, completion: nil)
+  }
 }
+

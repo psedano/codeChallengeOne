@@ -1,24 +1,20 @@
-//
-//  CareerHistoryTableViewCell.swift
-//  CodeChallengeHSBC
-//
-//  Created by Pablo Irmin Rivera Sedano on 5/22/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
 
 import UIKit
 
 class CareerHistoryTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  @IBOutlet weak var companyLogo: UIImageView!
+  @IBOutlet weak var panelView: UIView!
+  @IBOutlet weak var labelJobTitle: UILabel!
+  @IBOutlet weak var labelJobDates: UILabel!
+  @IBOutlet weak var textViewDescription: UITextView!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    panelView.layer.cornerRadius = 8
+    panelView.backgroundColor = UIColor.CustomColors.color3
+    textViewDescription.backgroundColor = UIColor.clear
+    labelJobTitle.textColor = UIColor.white
+    labelJobDates.textColor = UIColor.white
+    textViewDescription.textColor = UIColor.white
+  }
 }

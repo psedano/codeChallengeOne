@@ -1,23 +1,17 @@
-//
-//  ViewController.swift
-//  CodeChallengeHSBC
-//
-//  Created by Pablo Irmin Rivera Sedano on 5/21/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class LandingViewController: UIViewController {
   @IBOutlet weak var headerView: HeaderView!
   @IBOutlet weak var panelsTableView: UITableView!
   typealias constants = Constants
   var informationForTitles = [String]()
   var informationContent = [String]()
   var selectedInfo = [String]()
+  var presenter: LandingPresentable?
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    presenter = LandingPresenter(view: self)
     setupUI()
   }
   
@@ -42,7 +36,7 @@ class ViewController: UIViewController {
   }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension LandingViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return informationForTitles.count
   }
@@ -81,3 +75,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
 }
 
+extension LandingViewController: LandingViewable {
+  
+}

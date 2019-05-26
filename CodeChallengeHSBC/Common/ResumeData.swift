@@ -1,9 +1,9 @@
-//
-//  ResumeData.swift
-//  CodeChallengeHSBC
-//
-//  Created by Pablo Irmin Rivera Sedano on 5/21/19.
-//  Copyright © 2019 Globant. All rights reserved.
-//
-
 import Foundation
+
+struct ResumeData: Decodable {
+  var nombreCompleto: String
+  var edad: Int
+  var informationTitulos: [String]
+  var informacionContenido: [String]
+  var careerHistory: [[String:String]]
+}
