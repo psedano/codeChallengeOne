@@ -21,18 +21,9 @@ class LandingViewController: UIViewController {
   }
 
   func setupUI() {
-    getPropertyList()
+    presenter?.performRequest()
     panelsTableView.dataSource = self
     panelsTableView.delegate = self
-  }
-  
-  func getPropertyList() {
-    if let path = Bundle.main.path(forResource: constants.resuleDataName, ofType: constants.plistType),
-      let xml = FileManager.default.contents(atPath: path),
-      let resumeData = try? PropertyListDecoder().decode(ResumeData.self, from: xml) {
-      informationForTitles = resumeData.informationTitulos
-      informationContent = resumeData.informacionContenido
-    }
   }
 }
 
@@ -58,7 +49,7 @@ extension LandingViewController: UITableViewDataSource, UITableViewDelegate {
     selectedInfo.append(informationForTitles[indexPath.row])
     selectedInfo.append(informationContent[indexPath.row])
     
-    if selectedInfo.first == "Career History" {
+    if selectedInfo.first == constants.careerHistoryDescription {
       performSegue(withIdentifier: "toCareerHistory", sender: self)
       return
     }
@@ -67,14 +58,24 @@ extension LandingViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if selectedInfo.first != "Career History" {
+    if selectedInfo.first != constants.careerHistoryDescription {
       let destinationVC = segue.destination as! DetailViewController
       destinationVC.selectedInfo.removeAll()
       destinationVC.selectedInfo = selectedInfo
+    } else {
+      let destinationVC = segue.destination as! CareerHistoryViewController
+      guard let careerHistory = presenter?.getCareerHistory() else {
+        return
+      }
+      destinationVC.careerHistory = careerHistory
     }
   }
 }
 
 extension LandingViewController: LandingViewable {
-  
+  func setInformation(infoTitulos: [String], infoContenido: [String]) {
+    informationForTitles = infoTitulos
+    informationContent = infoContenido
+    panelsTableView.reloadData()
+  }
 }

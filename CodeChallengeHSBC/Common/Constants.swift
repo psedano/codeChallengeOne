@@ -7,6 +7,8 @@ struct Constants {
   static let cellIdentifier: String = "infoCell"
   static let plistType: String = "plist"
   static let detailSegueName: String = "toDetail"
+  static let requestURL: String = "https://api.myjson.com/bins/16s8ao"
+  static let careerHistoryDescription = "Career History"
 }
 
 extension UIColor {

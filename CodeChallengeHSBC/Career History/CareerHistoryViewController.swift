@@ -7,17 +7,8 @@ class CareerHistoryViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    getPropertyList()
     careerTableView.dataSource = self
     careerTableView.delegate = self
-  }
-  
-  func getPropertyList() {
-    if let path = Bundle.main.path(forResource: constants.resuleDataName, ofType: constants.plistType),
-      let xml = FileManager.default.contents(atPath: path),
-      let resumeData = try? PropertyListDecoder().decode(ResumeData.self, from: xml) {
-      careerHistory = resumeData.careerHistory
-    }
   }
   
   @IBAction func closeButtonTapped(sender: UIButton) {
